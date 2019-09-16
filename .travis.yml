@@ -1,0 +1,16 @@
+sudo: false
+
+language: node_js
+node_js:
+    - 9
+    - 10
+
+script:
+  npm test
+
+after_success:
+  npm run coveralls
+
+branches:
+    only:
+        - master
